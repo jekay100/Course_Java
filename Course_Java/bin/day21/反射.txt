@@ -1,0 +1,19 @@
+反射是一种自我管理的机制 
+用Java代码管理Java的类，方法等
+
+名词->类
+名词：类，方法 ， 属性， 构造器(这些字本身是名词)
+Java中有个类叫类，方法，属性，构造器
+Class:Class, Method,Field,Constructor
+Class cls = Student.class类加载的结果是Class的对象
+Student.class,student是class的类
+任务类都是class的实例
+	类可以作为对象管理
+	1.Class实例的获得方式
+		A.Java类只按需加载一次，任何方式获得的实例都是同一个
+		3种方法：1 类的.class属性
+				 2 对象的getClass方法 x
+				 3Class类的静态寻找方法Class.forName();//这个最常用
+	2.Class实例的用途
+		写测试的时候不用写main了，只写上个以test开头的
+		加个测试方法就行了不用改main方法了

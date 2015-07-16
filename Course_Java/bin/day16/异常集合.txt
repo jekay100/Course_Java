@@ -1,0 +1,35 @@
+标识符
+	变量名，方法名，类名，包名，等一切命名，用于区分不同的类等
+	迭代=遍历=每个处理一遍，指一个过程
+	
+系统登陆实例：
+	1，根据用户名找到用户对象
+	2，比较用户对象的密码与当前密码是不是相等
+	3，
+散列表
+1.容量：散列表中散列数组的大小
+2.散列运算：key~到散列值（数组的下标）的算法，散列值的结果，	
+3,散列桐是散列值相同的元素
+4，加载因子
+5散列查找，是根据key计算散列值，根据key找到散列桐，再桐中顺序查找
+
+entry一条（Key:value)就是一个entry也是对象桐里的entry是集合这个集合是无序 ，不一样，不重复，所以是set，返回的也是set
+Map
+用来迭代的	
+
+异常
+	行为的意外结果（取钱，帐户余额不足）
+	方法抛出异常必须声明异常throws
+	异常声明用throws异常的抛出用throw
+	================================================
+	异常的继承root
+	Throwable(可以抛出的，很少用)
+	 Error错误（系统不可恢复的，是Jvm的错误，(StackOverflowError（栈内存溢出）死递归)）和Exception（程序可以处理的）
+	  ParseException();
+	  RuntimeException(非检查异常)Javac不检查这个异常在编译时通常要用异常的时候要声明异常了，但是这个没有IlligelArgumentException
+	  	nullPointException(),
+	  	ArrayIndexOutofBoundsException()
+	  	ClassCastException//类型转化
+	  	NumberFormatException（Integer.prseInt()）
+		
+	

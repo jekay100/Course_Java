@@ -1,0 +1,37 @@
+File file = new File("dd");//只是创建了代表他的目录的对象，还没有真正创建目录 
+不能访问文件的内容,只能读取文件的信息
+length(),返回文件的大小（Byte），长度用long，容易超这个返回值就是long，Java设计时就考虑大小了
+mkdirs,创建子目录 
+createNewFile()有异常抛出，因为有可能不能读（往光盘里面写）
+listFile(FileFilter);
+
+回调模式和FileFilter
+File[] listFilter(new Filter());
+
+java.io.RandomAccessFile///这里的随机不是随便读的意思而是随时可以把游标移动到任何一个位置 
+可以访问（读/写）一个文件中的任意位置的字节信息、、可以帮我们读写文件中的任意数据，他是随机的
+构造器有两个参数,
+RandomAccessFile(File(被读写的那个文件), String（r,w,rw）) throws FileNotFoundException;
+RAF维护一个指针，指向要读写的位置，指针会随着读写自动移，用这个类打开一个文件，默认有个游标，他指向第一个元素
+int read();返回 时同时把游标向后移动一下
+seek(long)移动到某个位置
+getFilePointer(),得到游标的指针
+
+int read(byte[])读取到缓冲区，这个不同于上面的那个一次只读一个byte
+缓冲区的东西写出
+//类
+inputstream是对看小说的模拟，是个抽象类，看小说是个抽象的，可能在书上看也可能在电子书上看，看小说所以有read方法 和前面的一样，有一个byte的读
+也有多个byte的读
+java.io.InputStream输入流(读文件)
+java.io.OutputStream输出流（写文件）;
+输入和输入出混起来就是文件的复制
+
+怎么看文件一样不，md5sum xxx, xxx.kd(一个文件的指纹);
+自己每次定义缓冲区太乱了，所以Java提供了缓冲区流
+File没有移动，复制，第三方提供的api有复制和移动，阿帕奇提供的类有移动和复制
+递归用的不多但是在目录上非常常见
+文本文件和二进制文件 任何的文件（mp3）都是5M个数据的集合
+GB2321是GBK的子集 中是(中，A,->d6d0,41)
+UTF-16BE所有的字符都是16位（中，4->4e2d,0041）
+
+

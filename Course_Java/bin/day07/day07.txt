@@ -1,0 +1,118 @@
+Linux / Unix 命令格式
+ command [-选项...] [参数...]
+
+1 目录
+ 1.1
+  cd 或者 cd ~ : 返回"主目录"
+  . 表示当前目录
+  .. 表示上级目录(父目录)
+  ~ 代表"主目录"
+  以"/" 开始的目录路径表示: 绝对路径, 反之: 相对路径
+  相对路径: 是相对于当前目录. ".", ".." 都是相对路径
+  以"." 为开头的文件/目录是隐藏的
+ 1.2 ls 列目录命令
+  如:
+  ls /
+  ls /etc
+  ls /opt
+  ls ~
+  ls workspace
+  ls -a ~ 显示全部的内容(包括隐藏文件和目录)
+   
+ 1.3 创建目录 
+ 	mkdir .photo 创建隐藏文件夹 ".photo"
+ 1.4 mv 移动/改名文件夹和文件
+   mv .photo photo //改名
+   mkdir mm
+   mv mm photo //移动
+   ls photo
+   mv passwd passwd.bak
+   
+ 1.5 rm 删除文件/目录
+   rm -rf photo
+ 
+ 1.6 cp 复制文件/目录
+   cp -r workspace workspace.bak
+   cp /etc/passwd ~
+   
+2 文件的创建
+  2.1 echo 回显命令
+    echo abc 将abc回显到控制台   
+  2.2 ">" 输出重定向, 将命令的"标准输出" 结果重新定向到
+   新的目标.
+      ">>" 表示追加输出 
+    ls />rootlist.txt
+    echo abc>test.txt  
+    echo abc>>test.txt
+  2.3 cat 查看文件内容
+  2.4 touch 创建新空白文件, 修改文件访问时间
+
+3 文件的授权
+  ls -l 查看长格式结果
+  drwxrwxrwx  liucs liucs com
+  -rwxrwx---  liucs liucs Hi.java
+  
+  chmod 660 test.txt
+        rw- rw- ---
+  421   421
+  000 0 ---   
+  001 1 --x
+  010 2 -w-
+  011 3 -wx
+  100 4 r--
+  101 5 r-x
+  110 6 rw-
+  111 7 rwx
+
+4 "|" 管道符号, 连接两个命令, 将第一个命令的结果作为第二
+ 个命令的输入
+  ls -l|more
+  
+5 创建和修改文本文件 vi 
+  1 打开 vi [filename] -> 命令状态
+    命令状态: 任何键盘输入都是命令
+    命令状态: [esc] 总是回到命令状态
+    编辑状态: 对文本进行编辑, 任何的输入都是编辑内容
+        vi [filename] ->        i o a ->
+   命令行                  命令状态            编辑状态
+         <- :q 退出命令           <- [esc]
+         <- :q!强制退出命令   
+         <- :wq保存退出命令                
+                          :w保存
+                          :w [filename]
+  / ? n 查找
+  
+6 tar打包命令
+  1 打包: tar -cvf tarfile.tar file1 file2 ...
+    压缩打包: tar -zcf tarfile.tar.gz file1 file2 ..
+  
+  2 释放: tar -xf tarfile.tar
+    释放压缩包: tar -zxf tarfile.tar.gz
+    默认释放到当前目录
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

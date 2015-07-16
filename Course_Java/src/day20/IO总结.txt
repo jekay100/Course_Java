@@ -1,0 +1,27 @@
+IO
+下面这两个只描述的概念派生出许多子类
+InputStream
+	|--节点流（流开始的地方）
+	|	|--FileInputStream
+	|	|--ByteArrayInputStream
+	|--过滤流
+		|--BufferedInputStream(他不是流开始的地方，)
+		|--ObjectInputStream
+		|--ZipInputStream(经过他的过滤，解压缩)
+		|--InputStreamReader但是不是标准的流是Reader
+		
+OutputStream
+
+文本的处理完成byte到Char的编码问题
+Reader没有结点，其实核心结点在InputStream
+	|--InputStreamReader核心 处理(byte->char,解码)
+	|--FileReader  = InputStreamReader + FileInputStream
+	|--BufferedReader,这个是最常用的，有个方法叫readLine()--------+++++++++++++++--------------+++++
+	 如：GBK(byte) ->Java的Unicode(char)
+Writer
+	|--FileWriter = OutputStreamWritter+OutputStreamWriter;
+	|--PrintWriter 非常常用有个方法 叫println()--------+++++++++++++++--------------+++++
+——————————————————————————
+上面的用起来不方便，Java弄了些组合方案
+
+上面的标准设计模式 ：装适器模式，

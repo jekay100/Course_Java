@@ -1,0 +1,33 @@
+Java中能表示字符串的有char[]，String,StringBuilder，
+字符串字面量就是String类型的实例，
+String 的核心就是不变的不变的char[]也就是对象不变但引用 可以变,字符数组可以变
+toString返回的不是新对象
+int[]数组长度不可以变，但是可以变象的变，把原来的仍了，换成个新的了
+字符串的特点有设计思想
+字符串的不变特性是字符串的对象不变，
+不变模式设计的类，就和基本类型感觉 一样了没有对象这种特点
+对象不能改就感觉对象和基本类型一样
+String 的API 返回全是新字符串
+API只能查
+用索引查String 
+indexOf();子串的位置
+indexOf可以重载,（c,3）第三个位置开始c的位置
+
+substring()s是小写的，arraycopy也是小写的，
+
+substring()有重载
+lastIndexOf();
+trim()
+String 比较用equals比较，hashCode也一样
+关于字符串直接量的问题
+Array.toString sun做的不好
+
+
+
+
+
+
+
+
+
+

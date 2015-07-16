@@ -1,0 +1,49 @@
+Java的QQ非常厉害，如果QQ升级就会出现要维护所有版本的差异但是Java中的start，nihe了所有版本的差异
+只要你start他就能运行，不管底层怎么做，
+Java中多线程是非常牛逼的，
+进程启动最少含有mainThread
+什么时候结束running,(街机)，1，时间到了，2自己不玩了想呆一会，3被别人打死了，4机器挂了，
+线程还有个结束态，run程序运行完了叫到了结束态，Java规定如果线程结束了，就回收了，意思是不能用
+该对象再调start了，报错了，，必须建立新线程
+
+不推荐使用stop,
+
+阻塞，readLine();这个软件停了，就不暂处理器了，Java中如果线程进入阻塞态那么，线程就进入一个中间态了不能进入running，而是block
+
+线程状态：
+	1.new (新建)
+	2 Runnable
+	3 Running
+	4 Block
+	5 Dided
+线程状态管理
+	Thread.yield(),出让线程处理器从Running到Runnable
+	Thread.sleep(times)使当前线程从Running状态，放弃处理器进入Block状态，休息times毫秒，再返回到Runnable
+	如果其他线程打断当前线程的Block(Sleep)，发生异常
+	
+后台线程（守护线程，精灵线程 ）
+	Java进程的结束：当前所有前台线程都结束时，Java进程结束 ，后台线程不管是否结束，都被停掉
+	t.setDaemon(true);
+线程的优先级
+	默认有10个优先级，优先级主的线程获得的执行的机会多，进入Running的机会多，只不过是个机会 
+	默认优先级是5
+	
+线程的创建方式：
+	1.继承的Thread类
+	 a 继承Thread类 覆盖run()方法， 提供并发运行的过程，线程就是同时并发运行的方法
+	 b 创建这个类的实例
+	 c 使用start()方法启动线程
+	2.实现Runnable接口
+	 1，就是实现 一个方法run
+	 2.创建这个类的实例，用这个实例做为Thread构造器的参数，创建Thread
+	 3,用start启动
+	  class Foo implements Runnable{
+	  	public void run(){
+	  		//....
+	  	}
+	  }
+	  Thread t = new Thread(new Foo);
+	  t.start();
+线程不暴露，所以用内部类来写非常好
+
+	

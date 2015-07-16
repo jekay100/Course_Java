@@ -1,0 +1,30 @@
+两个线程并发取20个号码
+，解决公共厕所就是一个锁
+线程同步
+  1多个线程并发读写（只读不会出现线程安全的，大家都看一眼，没关系的）同一个临界资源时候会发生线程安全问题
+  2可以使用同步代码块解决，同步读写临界资源
+  3 a 同步代码块
+  	  synchronized(同步监视器)｛
+  	    ｝
+  	b 同步监视器 是一个任意对象的实例，是一个多个线程之间的互斥的锁机制
+  	     多个线程要使用同一个监视器实现同步互斥
+  	c  常见写法
+  	   synchronized(this){
+  	   }
+  	d 如果方法的全部过程需要同步，可以简单保用synchronized修饰方法
+Java中同步的API
+  1.StringBuffer是同步的
+  		相当于synchronized appned();添加资源的时候检查有没有同步锁
+    StringBuilder不是同步的  	//提高性能，是单线程的
+    	append();这个可能同时append
+  2. Vector 和 Hashtale
+     ArrayList 和 HashMap,线程不安全 	
+  3. Collections.synchronizedList();
+  	里面有synchronizedList(List),把list包装成，同步的   
+  	ArrayList list = new ArrayList();
+  	List sync = Collections.synchronizedList(list);
+ 异步线程之间，协作通信 	 	
+ 	异步写盘操作（你写的你的我读我的）把读取的缓冲到文件中去，然后用每各5秒，看看里面有没有有的话写一下
+ 	同步写文件：从控制台读取一行，立即写道文件中去(读一行写一行)
+ Java, wait , notify
+ 更适合写读写，两个线程之间的事 	  

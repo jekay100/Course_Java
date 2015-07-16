@@ -1,0 +1,27 @@
+写几位不重复就用boolean..双色球
+String[] ary = new String[];//是null,对象数组
+ary.toCharArray();把字符窜转化成字符数组
+“１”，｛“１”｝
+split(",");
+最期计算机是晶体管里面比较暖和所以有很多虫子所以
+ftp/telnet=shh
+gftp(GUI)像迅雷
+客户端　服务器
+echo $PATH;看环境变量
+是命令的查找（操作系统可执行命令的搜索）
+export PATH = 
+
+Java的安装与环境的配置
+１在SUN下载ＪＤＫ　http://java.sun.com
+  linxux版本的JDK是自释放压缩包
+  
+  windows不是export 是set
+exort PATH=$PATH:只在当前常口有ｘｉａｏ
+set PATH=%PATH%;c:/program ()/qq;只在当前窗口有效
+当前用户和系统级别的在上面是用户在所有用户
+etc/profile
+bash_profile
+备份bash_profile就是cp
+JAVA_HOME = $HOME/jdk1.5($HOME是可选的)
+PATH=$JAVA_HOME/bin:$PATH:/SBIN
+

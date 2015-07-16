@@ -1,0 +1,25 @@
+InputStreamReader数据流，Reader是他的父类型抽象类，这个是字符流，InputStream是字节流
+将输入流里的InputStream(byte)(全是byte)字节输入流->Unicode(char)
+打开一个文件的3种写法
+1.InputStream is = new FileInputStream("demo.txt");
+  InputStreamReader in = new InputStreamReader(is);
+2 InputStreamReader in = new InputStreamReader(new FileInputStream("demo.txt"));
+ FileReader内部实现 是InputStreamReader和FileInputStream 
+3 Reader in = new FileReader("demo.txt");和上面的完全等价
+	write(int x);低16位有效
+OutputStreamWriter
+打开输出文本文件
+4 Writer out = new OutputStreamWriter(new FileOutputStream("demo.txt"));
+5 Writer out = new FileWriter("demo.txt");这么打开文本文件其实不常 用，常 用的是下面的这个
+6 常用的文本文件输出方式 
+	PrintWriter out = new PrintWriter(new FileWriter("demo.txt"));
+	out.println("haha");
+	System.out这个就是个流，向流里输出用println
+=============================================
+文本文件一次一个char太不好了
+读取文本文件用另外一个类
+文本文件的读取：BufferedReader;方法 readline();
+
+	
+	
+

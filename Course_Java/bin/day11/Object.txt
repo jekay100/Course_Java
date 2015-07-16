@@ -1,0 +1,21 @@
+Object是Java的继承root类，所有类都从这个类继承
+toString();
+覆盖toString(推荐)必须做
+equals也是比较引用的
+hashCode（）与equals方法一同被覆盖这两个方法是一对必须一起写
+如果不一起写可能有错误
+hashCode与内存地址对应的整数 ，当两个对象相等 时hashcode值一样
+hashcode一但确定 就不改了
+public boolean equals(Object obj){
+		if(obj == null){
+			return false;
+		}
+		if(this == obj) {
+			return true;
+		}
+		if(obj instanceof Card){
+			Card c = (Card)obj;
+			return suit == c.suit&&rank == c.rank;
+		}
+		return false;
+	}

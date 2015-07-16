@@ -1,0 +1,33 @@
+StringBuilder是变长的字符序列
+String 不可改变，性能底
+StringBuilder方法：append ,insert...
+StringBuilder的内核是使用变长算法维护的char[]
+StringBuilder默认16个字符，超过就增长，增长不是一个一个的长，你可以进行人优化可以提高效率
+buf.append("刘玉峰：")
+		.append("的妻子是")
+		.append("绝对佳人！")
+		.insert(0,"大师")
+		.delete(5,6);
+字符串底层连接用StringBuider实现的
+StringBuilder返回的是对象本身的引用
+大量运算用StringBuilder，String 底层就是StringBuilder
+StringBuffer是Java早期提供的速度慢，线程安全（加锁机制）;检查锁所以 慢
+厕所轮，你进去别人不能用，锁了，相当于你append别人不能append，线程安全的
+建议用StringBuilderJava5以后出现的
+多线程用StringBuffer;
+不用大量操作就用String,(增删改查);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

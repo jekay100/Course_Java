@@ -1,0 +1,44 @@
+（布尔表达式）？（true表达式）：（false表达式）
+网站数据分页
+去网站搜东西，总共得到了23条，一页显示10条，用这个算
+int rows = 23;
+int size = 10;
+int pages;
+pages = row % size == 0 ? rows/size : rows/size+1;
+
+
+Java的分支结构
+if...else
+switch case
+
+if(布尔表达式)Java中必须是boolean
+if(写成肯定条件减少使用否定)
+else尽量别写会出现逻辑错误
+if最多写二层
+把else写在前面这个是个技巧
+if..else if。。。这个效率不好用switch（必须是整数表达式）...case
+switch开关，，，case情况
+default的话肯定被初始化，否则可能没有初始化
+
+for(初始化表达式; 布尔表达式;递增表达式)｛】
+单方面的考虑最好
+int sum = 0;
+for(int i = 2; i <= 10; i+=2){sum+=i;}
+先考虑sum的值先分开考虑
+for循环就是能做数组考虑
+数组的序号
+
+
+Break和continue的区别
+Break看有没有出现胡字的那个代码有的话就不用往下做了
+
+
+条形码的那个要注意10-几得几如果是10就%0
+
+
+表达式写的简单一些
+while经常处理与次无关的，而for相反
+
+do{}while是用来检验信息的输入有误就继续输入
+while经常用作死循
+假如循环里面有两种可能就做个标志

@@ -1,0 +1,31 @@
+第三方包的使用
+  1 在项目文件夹下创建文件夹 lib
+  2 复制 *.jar文件到 lib
+  3 配置jar文件到项目的CLASSPATH中
+   选择项目->File->Properties
+    -> Java Build Path-> Libraries
+    -> add JARs 
+    
+    时间日期
+  1 java 中基本的时间表示 long 
+  2 Java提供了Date类型表示时间和日期
+    Date 是long类型的包装
+  3 Calendar 是历法的的抽象.
+    历法: 公历, 农历, 太阳历, ...
+    GregorianCalendar 是历法的实现, 采用公历
+    (太阳历) 算法实现的. 
+    Calender cal = Calender.getInstance();
+  4      new Date(long)
+         date.setTime(long)  cal.setTime(Date);
+         ---------->      --------->
+   long <---------- Date <---------  Calendar
+        date.getTime()     cal.getTime()     
+ 
+ 时间的输出 
+ DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//fmtj是个格式，格式是通用的所以是工具 类
+		String str = fmt.format(date);
+		System.out.println(str);
+DateFormat是抽象类
+
+		       
+        

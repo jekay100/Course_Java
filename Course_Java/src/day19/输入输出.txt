@@ -1,0 +1,23 @@
+输入，输出，in,out是相对的
+处理器+内存是计算机的核心，往外出的就out,向这里面进的叫in
+处理器可以比喻成人，吃就是in,拉就是out
+硬盘往u盘里复制东西，其实先用了in写在内存里面然后用out输出 
+
+阻塞式IO
+	console.readLine(),//软件在这里停住了阻塞了，用户输入之后继续找，nextLine也是阻塞式IO等待用户的输入为止
+ 	如果不输入一值block
+ Java中的许多IO全是阻塞式的,阻塞式的IO会影响性能，可以用线程处理
+ 
+ 对象序列化：
+   int -> 流，（1个整数是4个byte）所以是流
+   long ->8个byte的流
+   String 5个字符->和编码用关（假如是GBK）10个流
+   Object->也可以折成n个流byte,一个对象 也是数据的集合
+  一个对象变成多少个流，就是序列化，一个对象 要想写成一个流，必须写成实现序列化接口
+  对象在序列化时比较麻烦，所以Java提供了接口，Java所有对象可以序列化，这样把对象写在流里了
+  ObjectOutputStream ObjectInputStream,负责对象的输入输出，有两个方法 writeObject(obj),用来转化成流readObject();
+  反序列化
+  
+  
+   
+ 

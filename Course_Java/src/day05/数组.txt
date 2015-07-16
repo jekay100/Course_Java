@@ -1,0 +1,38 @@
+声明之后是变量
+int[] arr;
+int arr[];//不推荐Java内存是没有这个东西
+初始化动态初始化必须指明长度
+	int[] ary = new int[10]
+	int[] ary = new int[]{3,4,54,5,6,67}
+	new是动态，运行期运行
+静态初始化只能在声明时用不能复值
+int[] ary = {2,3,4,4,54,5};
+ary = {33,3,3,4,4}//编译错
+数组自动初始化为“零”
+char[] ary = new char[5];//10个字节，默认0是放'\u00000'就是这个
+System.out.println(ary[2]+',');//44
+System.out.println(ary[2]+",");
+错误
+ArrayIndexOutOfBount
+
+统计要写在循环里面
+要累加
+
+
+数组的扩展问题
+1Java数组的大小是固定的
+2利用数组的复制到方法可以变通的实现的扩展
+System.arraycopy(ary,0,ary4,0,ary.length);
+少数几个没有按规则来的
+import java.util.Arrays(数组的工具类)
+String也是数组所以要按数组考虑
+str.length();有括号
+ary = Arrays.copyOf(ary, length+1);
+Java -> Compiler(编译器)
+凡是碰到0~n对应什么东西写成数组
+二唯数组全写成1唯 数组
+
+行列转化 j*colum + i;
+
+System.arraycopy要先有空间了
+Arrays.copyOf不要空间结果就是个数组
